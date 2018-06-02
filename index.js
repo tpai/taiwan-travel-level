@@ -28,7 +28,7 @@
   });
 
   // hide context menu
-  $(document).mouseup(e => {
+  $(document).on('mouseup touchend', e => {
     if (!contextMenu.is(e.target) && contextMenu.has(e.target).length === 0) {
       contextMenu.hide();
     }
