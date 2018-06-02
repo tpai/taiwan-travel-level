@@ -1,0 +1,162 @@
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #B4DEF7;
+  margin: 0;
+}
+
+.default {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.map {
+  width: 100%;
+  max-width: 450px;
+}
+
+.hero {
+  display: block;
+  border: 1px solid #777;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 10px 0;
+}
+
+.row p {
+  margin: 0;
+}
+
+.row p:first-of-type {
+  width: 160px;
+}
+
+.row:last-child {
+  margin: 0;
+}
+
+.contextMenu {
+  width: 180px;
+  background: #fff;
+  border: 1px solid #777;
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+}
+
+.menuButton {
+  margin: 0;
+  padding: 5px 10px;
+  border-bottom: 1px solid #777;
+  cursor: pointer;
+}
+
+.menuButton:first-of-type {
+  border-top-left-radius: 5px;
+}
+
+.menuButton:last-child {
+  border-bottom: 1px solid transparent;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.menuButton:hover {
+  background: #eee;
+}
+
+.red-border {
+  border-right: 3px solid #FF7A7A;
+}
+
+.yellow-border {
+  border-right: 3px solid #F5A623;
+}
+
+.green-border {
+  border-right: 3px solid #88B14B;
+}
+
+.blue-border {
+  border-right: 3px solid #27BBEE;
+}
+
+.white-border {
+  border-right: 3px solid #fff;
+}
+
+.lockedMenu {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 110px;
+}
+
+.button {
+  width: 80px;
+  height: 30px;
+  border: 0;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background: #eee;
+}
+
+.bottomBar {
+  width: 100%;
+  height: 22px;
+  background: #555;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a#ref {
+  font-size: 8px;
+  color: #fff;
+}
+
+.github {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}

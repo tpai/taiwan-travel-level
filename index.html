@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta property="og:title" content="制縣等級台灣版" />
+    <meta property="og:url" content="https://travel.tonypai.com.tw/" />
+    <meta property="og:description" content="從小到大，你在台灣的哪些地方待過呢？當紅的制縣等級出台灣版啦！來算算吧！" />
+    <meta property="og:image" content="https://i.imgur.com/g3Y34Mt.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <title>制縣等級台灣版</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.5/canvg.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102914895-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-102914895-2');
+    </script>
+  </head>
+  <body>
+    <div id="contextMenu" class="contextMenu">
+      <div id="lv4" class="row menuButton red-border">
+        <p>久居（超過三年）</p>
+      </div>
+      <div id="lv3" class="row menuButton yellow-border">
+        <p>居住（一年以上）</p>
+      </div>
+      <div id="lv2" class="row menuButton green-border">
+        <p>短居（一個月以上）</p>
+      </div>
+      <div id="lv1" class="row menuButton blue-border">
+        <p>旅遊</p>
+      </div>
+      <div id="lv0" class="row menuButton">
+        <p>以上皆非</p>
+      </div>
+    </div>
+
+    <div class="lockedMenu">
+      <a href="https://github.com/tpai/taiwan-travel-level" target="_blank">
+        <svg class="github" aria-labelledby="simpleicons-github-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-github-icon">GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <button id="saveAs" class="button">儲存圖片</a>
+    </div>
+
+    <div class="default">
+      <div class="map">
+        <?xml version="1.0" encoding="utf-8"?>
+        <!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <svg id="map" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                                                                                          viewBox="0 0 750 1124" style="enable-background:new 0 0 750 1124;" xml:space="preserve">
+          <style type="text/css">
+.st0{fill:#B4DEF7;}
+.st1{fill:#FFFFFF;}
+.st2{fill:#333333;}
+.st3{font-family:'FZLTZHB--B51-0';}
+.st4{font-size:52.1035px;}
+.st5{font-size:48px;}
+.st6{font-size:20px;}
+.st7{fill:#FF7A7A;}
+.st8{fill:#F5A623;}
+.st9{fill:#88B14B;}
+.st10{fill:#27BBEE;}
+.st11{fill:#FFFFFF;stroke:#333333;stroke-width:2;stroke-miterlimit:10;}
+.st12{fill:#FFFFFF;stroke:#333333;stroke-width:4;stroke-linejoin:round;stroke-miterlimit:10;}
+.st13{fill:#FFFFFF;stroke:#333333;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.st14{fill:#FFFFFF;stroke:#333333;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;}
+.st15{font-size:23.0006px;}
+          </style>
+          <g id="圖層_1">
+          <rect x="-0.2" y="2" class="st0" width="750.2" height="1124"/>
+          <path class="st1" d="M719,1104H28c-2.8,0-5-2.2-5-5v-55.3c0-2.8,2.2-5,5-5h691c2.8,0,5,2.2,5,5v55.3
+          C724,1101.8,721.8,1104,719,1104z"/>
+          <text transform="matrix(1 0 0 1 46.5859 93.9209)"><tspan x="0" y="0" class="st2 st3 st4">制縣等級 </tspan><tspan id="total" x="222.9" y="0" class="st2 st3 st5">0</tspan></text>
+          <text transform="matrix(1 0 0 1 104.6665 1077.2633)" class="st2 st3 st6">久居</text>
+          <g>
+          <circle class="st7" cx="69.3" cy="1071.3" r="19"/>
+          <g>
+          <path class="st2" d="M70.6,1078.2v-2.1h-5.8c-0.7,0-1.3-0.2-1.6-0.5c-0.4-0.3-0.5-0.8-0.5-1.3c0-0.1,0-0.3,0.1-0.4
+          c0.1-0.1,0.1-0.3,0.2-0.5c0.1-0.2,0.2-0.3,0.3-0.5s0.3-0.3,0.4-0.6l6.1-8.1c0.4-0.5,0.7-0.9,1-1.2c0.3-0.2,0.6-0.4,0.9-0.4
+          c1.2,0,1.7,0.7,1.7,2v8.9H74c0.6,0,1.1,0.1,1.4,0.2c0.4,0.2,0.5,0.5,0.5,1.1c0,0.4-0.1,0.8-0.4,1c-0.3,0.2-0.7,0.3-1.3,0.3h-0.7
+          v2.1c0,0.6-0.1,1-0.4,1.3c-0.3,0.3-0.6,0.4-1,0.4c-0.4,0-0.8-0.1-1-0.4C70.8,1079.2,70.6,1078.8,70.6,1078.2z M65.7,1073.5h4.9
+          v-6.7L65.7,1073.5z"/>
+          </g>
+          </g>
+          <text transform="matrix(1 0 0 1 233.336 1077.2623)" class="st2 st3 st6">居住</text>
+          <g>
+          <circle class="st8" cx="199" cy="1071.3" r="19"/>
+          <g>
+          <path class="st2" d="M198.4,1069.4c0.7,0,1.3-0.2,1.8-0.6s0.8-1,0.8-1.8c0-0.6-0.2-1.1-0.6-1.5c-0.4-0.4-1-0.6-1.6-0.6
+          c-0.5,0-0.9,0.1-1.2,0.2s-0.5,0.3-0.7,0.5s-0.3,0.5-0.5,0.8c-0.2,0.3-0.3,0.7-0.4,1c-0.1,0.2-0.2,0.3-0.4,0.4s-0.4,0.1-0.7,0.1
+          c-0.3,0-0.6-0.1-0.8-0.4c-0.3-0.2-0.4-0.6-0.4-1c0-0.4,0.1-0.8,0.4-1.3c0.2-0.4,0.6-0.9,1.1-1.3c0.5-0.4,1-0.7,1.7-1
+          c0.7-0.2,1.5-0.4,2.3-0.4c0.7,0,1.4,0.1,2,0.3c0.6,0.2,1.1,0.5,1.6,0.9c0.5,0.4,0.8,0.8,1,1.3s0.3,1,0.3,1.6c0,0.8-0.2,1.4-0.5,2
+          s-0.8,1.1-1.4,1.6c0.6,0.3,1.1,0.7,1.5,1.1c0.4,0.4,0.7,0.9,0.9,1.4c0.2,0.5,0.3,1,0.3,1.6c0,0.7-0.1,1.4-0.4,2
+          c-0.3,0.6-0.7,1.2-1.2,1.7c-0.5,0.5-1.2,0.9-1.9,1.2c-0.7,0.3-1.6,0.4-2.5,0.4c-0.9,0-1.7-0.2-2.5-0.5c-0.7-0.3-1.3-0.7-1.8-1.2
+          c-0.5-0.5-0.8-1-1.1-1.5c-0.2-0.5-0.4-1-0.4-1.3c0-0.4,0.1-0.8,0.4-1.1c0.3-0.3,0.6-0.4,1.1-0.4c0.2,0,0.4,0.1,0.6,0.2
+          c0.2,0.1,0.3,0.3,0.4,0.5c0.4,1.1,0.8,1.9,1.3,2.4c0.5,0.5,1.1,0.8,1.9,0.8c0.5,0,0.9-0.1,1.4-0.3c0.4-0.2,0.8-0.6,1.1-1
+          c0.3-0.5,0.4-1,0.4-1.6c0-0.9-0.2-1.6-0.7-2.1c-0.5-0.5-1.2-0.8-2-0.8c-0.2,0-0.4,0-0.7,0c-0.3,0-0.5,0-0.6,0
+          c-0.4,0-0.7-0.1-1-0.3c-0.2-0.2-0.3-0.5-0.3-0.9c0-0.4,0.1-0.7,0.4-0.9c0.3-0.2,0.7-0.3,1.2-0.3H198.4z"/>
+          </g>
+          </g>
+          <text transform="matrix(1 0 0 1 362.0052 1077.2633)" class="st2 st3 st6">短居</text>
+          <g>
+          <circle class="st9" cx="328.7" cy="1071.3" r="19"/>
+          <g>
+          <path class="st2" d="M326.7,1077h6c0.6,0,1.1,0.1,1.4,0.4s0.5,0.6,0.5,1c0,0.4-0.1,0.7-0.4,1s-0.6,0.4-1.1,0.4h-8.4
+          c-0.6,0-1-0.2-1.3-0.5c-0.3-0.3-0.5-0.7-0.5-1.1c0-0.3,0.1-0.6,0.3-1.1c0.2-0.5,0.4-0.8,0.7-1.1c1-1.1,1.9-2,2.8-2.7
+          c0.8-0.8,1.4-1.2,1.8-1.5c0.6-0.4,1.1-0.9,1.6-1.3c0.4-0.4,0.7-0.9,1-1.4c0.2-0.5,0.3-0.9,0.3-1.4c0-0.5-0.1-0.9-0.3-1.3
+          c-0.2-0.4-0.6-0.7-1-0.9c-0.4-0.2-0.8-0.3-1.3-0.3c-1,0-1.8,0.4-2.4,1.3c-0.1,0.1-0.2,0.4-0.4,0.9c-0.2,0.5-0.4,0.9-0.6,1.2
+          c-0.2,0.3-0.6,0.4-1,0.4c-0.4,0-0.7-0.1-1-0.4c-0.3-0.3-0.4-0.6-0.4-1c0-0.5,0.1-1.1,0.4-1.7c0.2-0.6,0.6-1.1,1.1-1.6
+          c0.5-0.5,1.1-0.8,1.8-1.1c0.7-0.3,1.6-0.4,2.5-0.4c1.2,0,2.2,0.2,3,0.6c0.5,0.2,1,0.6,1.4,1c0.4,0.4,0.7,0.9,0.9,1.5
+          c0.2,0.6,0.3,1.1,0.3,1.7c0,0.9-0.2,1.8-0.7,2.6c-0.5,0.8-0.9,1.4-1.4,1.8c-0.5,0.4-1.3,1.1-2.5,2.1c-1.1,0.9-1.9,1.7-2.4,2.2
+          C327.1,1076.5,326.9,1076.7,326.7,1077z"/>
+          </g>
+          </g>
+          <text transform="matrix(1 0 0 1 490.6747 1077.2633)" class="st2 st3 st6">旅遊</text>
+          <g>
+          <circle class="st10" cx="458.3" cy="1071.3" r="19"/>
+          <g>
+          <path class="st2" d="M457.3,1078v-10.4c-1.9,1.5-3.2,2.2-3.9,2.2c-0.3,0-0.6-0.1-0.9-0.4c-0.2-0.3-0.4-0.6-0.4-0.9
+          c0-0.4,0.1-0.7,0.4-0.9c0.2-0.2,0.7-0.4,1.3-0.7c0.9-0.4,1.7-0.9,2.2-1.4c0.6-0.5,1-1,1.5-1.6c0.4-0.6,0.7-1,0.8-1.1
+          c0.1-0.1,0.4-0.2,0.7-0.2c0.4,0,0.7,0.2,1,0.5s0.4,0.7,0.4,1.3v13.1c0,1.5-0.5,2.3-1.6,2.3c-0.5,0-0.8-0.2-1.1-0.5
+          C457.5,1079.1,457.3,1078.6,457.3,1078z"/>
+          </g>
+          </g>
+          <text transform="matrix(1 0 0 1 619.3439 1077.2633)" class="st2 st3 st6">以上皆非</text>
+          <g>
+          <circle class="st11" cx="588" cy="1071.3" r="19"/>
+          <g>
+          <path class="st2" d="M593.9,1071.4c0,1.3-0.1,2.3-0.2,3.2s-0.4,1.7-0.8,2.5c-0.5,0.9-1.2,1.6-2,2.1s-1.7,0.7-2.8,0.7
+          c-1.2,0-2.2-0.3-3.1-1c-0.9-0.7-1.6-1.6-2.1-2.7c-0.2-0.6-0.4-1.3-0.5-2.1c-0.1-0.8-0.2-1.6-0.2-2.5c0-1.2,0.1-2.2,0.2-3.1
+          c0.1-0.9,0.3-1.7,0.6-2.4c0.5-1.1,1.1-1.9,2-2.5c0.9-0.6,1.9-0.9,3.1-0.9c0.8,0,1.5,0.1,2.1,0.4c0.6,0.3,1.2,0.6,1.7,1.1
+          c0.5,0.5,0.9,1.1,1.2,1.8C593.6,1067.3,593.9,1069.1,593.9,1071.4z M590.7,1071.2c0-1.4-0.1-2.5-0.3-3.4s-0.5-1.6-0.8-2
+          c-0.4-0.5-0.9-0.7-1.7-0.7c-1,0-1.7,0.5-2.1,1.5c-0.4,1-0.6,2.6-0.6,4.7c0,1.4,0.1,2.6,0.3,3.5c0.2,0.9,0.5,1.6,0.8,2.1
+          c0.4,0.5,0.9,0.7,1.6,0.7c0.7,0,1.3-0.2,1.7-0.7c0.4-0.5,0.7-1.2,0.8-2.1C590.6,1073.8,590.7,1072.6,590.7,1071.2z"/>
+          </g>
+          </g>
+          </g>
+          <g id="圖層_2">
+          <g>
+          <polygon id="屏東" class="st12" points="366,981 349.3,896 288.1,836.2 302.4,751.9 384.7,714.7 411.5,762.7 367.7,830.1 405.8,899.9 
+          401.7,990.4 384.7,961.7 		"/>
+          <polygon id="台東" class="st12" points="405.8,899.9 367.7,830.1 411.5,762.7 384.7,714.7 438.1,630.7 498.1,679.8 533.7,597.7 552.2,597.8 
+          509.3,727.4 437.8,797.8 		"/>
+          <polygon id="花蓮" class="st12" points="619.8,376.7 552.2,597.8 533.7,597.7 498.1,679.8 424.9,620.1 488,544.1 533.7,368.6 576.4,374.8 
+          583.6,359.7 		"/>
+          <polygon id="宜蘭" class="st12" points="619.8,376.7 583.6,359.7 576.4,374.8 533.7,368.6 514.5,317.8 554.8,284.3 626.7,219.8 675,201.4 
+          630.4,258.9 642.3,320.1 		"/>
+          <polygon id="高雄" class="st12" points="288.1,836.2 240.6,785.7 229.3,727.6 278.9,726.2 348.9,634.9 415.5,585.2 442.5,598.8 424.9,620.1 
+          438.1,630.7 384.7,714.7 302.4,751.9 		"/>
+          <polygon id="台南" class="st12" points="229.3,727.6 225.9,707.6 201.7,693.7 217.8,628.1 284.1,603.9 309.7,608.9 337.6,649.7 278.9,726.2 
+          "/>
+          <polygon id="嘉義" class="st12" points="217.8,628.1 217.8,573.7 302.6,548.1 374.4,554.2 415.5,585.2 348.9,634.9 337.6,649.7 309.7,608.9 
+          284.1,603.9 		"/>
+          <polygon id="南投" class="st12" points="527.2,393.6 488,544.1 442.5,598.8 415.5,585.2 374.4,554.2 340.9,551.4 343.6,453 		"/>
+          <polygon id="雲林" class="st12" points="217.8,573.7 247.4,496.2 342.2,505.9 340.9,551.4 302.6,548.1 		"/>
+          <polygon id="彰化" class="st12" points="302.4,400.1 247.4,496.2 342.2,505.9 343.6,453 		"/>
+          <polygon id="台中" class="st12" points="341.3,344.5 302.4,400.1 343.6,453 527.2,393.6 533.7,368.6 514.5,317.8 421.7,376.7 380.6,376.7 		
+          "/>
+          <polygon id="苗栗" class="st12" points="393.6,272.5 341.3,344.5 380.6,376.7 421.7,376.7 483,336.9 437.8,328 444,300.1 		"/>
+          <polygon id="新竹" class="st12" points="428.2,226 393.6,272.5 444,300.1 437.8,328 484.1,337.1 514.5,317.8 526.4,307.9 504.5,264.4 		"/>
+          <polygon id="桃園" class="st12" points="496,167.8 527.2,195.5 516.7,236.2 554.8,284.3 526.4,307.9 504.5,264.4 428.2,226 		"/>
+          <polygon id="新北" class="st12" points="527.2,158.5 496,167.8 527.2,195.5 516.7,236.2 554.8,284.3 626.7,219.8 675,201.4 652.7,187.9 
+          651.1,167.8 626.7,167.8 602.5,160.9 605.1,144.8 552.2,127.1 		"/>
+          <polygon id="台北" class="st12" points="542.3,167.8 548,206.2 583.6,218.3 595.9,201.4 566.2,152.3 		"/>
+          <path id="金門" class="st13" d="M112.2,337.9c0,0,2.2,26.9,3.3,26.1c1.1-0.8,20.4-13.1,20.4-13.1l25.7,10.5l-2.8-34.8l-22.9,12.7
+          L112.2,337.9z"/>
+          <polygon id="澎湖1" class="st13" points="115.1,524.2 126.5,539.9 140,556.5 109,572 103,559 117.6,545.7 106.8,528.2 		"/>
+          <polygon id="澎湖2" class="st13" points="103,535.1 94.5,531.6 84.3,556.5 94.5,556.5 		"/>
+          <polygon id="澎湖3" class="st13" points="93.7,593.2 105.7,600.7 93.7,610.8 		"/>
+          <polygon id="馬祖1" class="st14" points="108.7,172.3 112.2,187.1 92.4,187.1 		"/>
+          <path id="馬祖2" class="st14" d="M82.6,195.9c0.6,0,19.5,4.7,19.5,4.7l-16.6,10.6L82.6,195.9z"/>
+          <text transform="matrix(1 0 0 1 318.8428 801.5312)" class="st2 st3 st15 city">屏東</text>
+          <text transform="matrix(1 0 0 1 325.2979 697.7734)" class="st2 st3 st15 city">高雄</text>
+          <text transform="matrix(1 0 0 1 234.8994 674.2617)" class="st2 st3 st15 city">台南</text>
+          <text transform="matrix(1 0 0 1 85.5078 509.6504)" class="st2 st3 st15 city">澎湖</text>
+          <text transform="matrix(1 0 0 1 92.9629 322.0596)" class="st2 st3 st15 city">金門</text>
+          <text transform="matrix(1 0 0 1 122.9629 204.666)" class="st2 st3 st15 city">馬祖</text>
+          <text transform="matrix(1 0 0 1 279.8779 587.8145)" class="st2 st3 st15 city">嘉義</text>
+          <text transform="matrix(1 0 0 1 264.5449 533.9668)" class="st2 st3 st15 city">雲林</text>
+          <text transform="matrix(1 0 0 1 279.8779 476.7217)" class="st2 st3 st15 city">彰化</text>
+          <text transform="matrix(1 0 0 1 337.9268 408.8701)" class="st2 st3 st15 city">台中</text>
+          <text transform="matrix(1 0 0 1 367.0664 344.2969)" class="st2 st3 st15 city">苗栗</text>
+          <text transform="matrix(1 0 0 1 435.5566 278.6172)" class="st2 st3 st15 city">新竹</text>
+          <text transform="matrix(1 0 0 1 462.1357 228.0161)" class="st2 st3 st15 city">桃園</text>
+          <text transform="matrix(1 0 0 1 538.5488 244.1167)" class="st2 st3 st15 city">新北</text>
+          <text transform="matrix(1 0 0 1 561.3633 325.5898)" class="st2 st3 st15 city">宜蘭</text>
+          <text transform="matrix(1 0 0 1 517.918 513.1729)" class="st2 st3 st15 city">花蓮</text>
+          <text transform="matrix(1 0 0 1 431.3779 722.7334)" class="st2 st3 st15 city">台東</text>
+          <text transform="matrix(1 0 0 1 545.2627 194.9224)" class="st2 st3 st15 city">台北</text>
+          <text transform="matrix(1 0 0 1 400.5039 509.9443)" class="st2 st3 st15 city">南投</text>
+          </g>
+          </g>
+        </svg>
+      </div>
+      <div class="bottomBar">
+        <a id="ref" href="https://zhung.com.tw/japanex/" target="_blank">Refer To Japanex</a>
+      </div>
+      </a>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
