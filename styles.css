@@ -1,3 +1,7 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 html, body {
   height: 100%;
 }
@@ -114,6 +118,13 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 110px;
+}
+
+@media (min-width:320px)  {
+  .lockedMenu {
+    right: 5px;
+    top: 5px;
+  }
 }
 
 .button {
