@@ -30,6 +30,16 @@ body {
   max-width: 450px;
 }
 
+/* Fix IE svg issue */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  svg#map {
+    width: 750px;
+    height: 1124px;
+    max-width: 450px;
+    max-height: 674px;
+  }
+}
+
 .hero {
   display: block;
   border: 1px solid #777;
