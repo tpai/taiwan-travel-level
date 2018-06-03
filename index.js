@@ -1,4 +1,7 @@
 (function() {
+  // object assign polyfill
+  polyfill();
+
   var colorMap = [
     "#fff",
     "#27BBEE",
@@ -47,10 +50,7 @@
       var lv = parseInt(e.currentTarget.id.replace('lv', ''), 10);
       cities = cities.map(function (city) {
         if (city.id === currentId) {
-          return {
-            ...city,
-            lv,
-          };
+          return Object.assign({}, city, { lv: lv });
         }
         return city;
       });
@@ -97,5 +97,45 @@
     doms.map(function (dom) {
       dom.style.fill = colorMap[lv];
     });
+  }
+
+  /**
+   ** Object assign polyfill
+   ** https://github.com/rubennorte/es6-object-assign
+   **/
+
+  function assign(target, firstSource) {
+    if (target === undefined || target === null) {
+      throw new TypeError('Cannot convert first argument to object');
+    }
+
+    var to = Object(target);
+    for (var i = 1; i < arguments.length; i++) {
+      var nextSource = arguments[i];
+      if (nextSource === undefined || nextSource === null) {
+        continue;
+      }
+
+      var keysArray = Object.keys(Object(nextSource));
+      for (var nextIndex = 0, len = keysArray.length; nextIndex < len; nextIndex++) {
+        var nextKey = keysArray[nextIndex];
+        var desc = Object.getOwnPropertyDescriptor(nextSource, nextKey);
+        if (desc !== undefined && desc.enumerable) {
+          to[nextKey] = nextSource[nextKey];
+        }
+      }
+    }
+    return to;
+  }
+
+  function polyfill() {
+    if (!Object.assign) {
+      Object.defineProperty(Object, 'assign', {
+        enumerable: false,
+        configurable: true,
+        writable: true,
+        value: assign
+      });
+    }
   }
 })();
