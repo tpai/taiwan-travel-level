@@ -77,21 +77,35 @@ body {
   position: absolute;
 }
 
-.menuButton {
+.menuItem {
   margin: 0;
   padding: 5px 10px;
   border-bottom: 1px solid #777;
-  cursor: pointer;
 }
 
-.menuButton:first-of-type {
+.menuItem:first-of-type {
   border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
-.menuButton:last-child {
+.menuItem:last-child {
   border-bottom: 1px solid transparent;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+
+.menuTitle {
+  margin: 0;
+  background: #eee;
+}
+
+.menuTitle p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.menuButton {
+  cursor: pointer;
 }
 
 .menuButton:hover {

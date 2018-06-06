@@ -13,6 +13,7 @@
   var cities=[{id:"新北",lv:0,},{id:"台北",lv:0,},{id:"基隆",lv:0,},{id:"桃園",lv:0,},{id:"新竹",lv:0,},{id:"苗栗",lv:0,},{id:"台中",lv:0,},{id:"彰化",lv:0,},{id:"雲林",lv:0,},{id:"嘉義",lv:0,},{id:"南投",lv:0,},{id:"台南",lv:0,},{id:"高雄",lv:0,},{id:"屏東",lv:0,},{id:"台東",lv:0,},{id:"花蓮",lv:0,},{id:"宜蘭",lv:0,},{id:"馬祖",lv:0,},{id:"金門",lv:0,},{id:"澎湖",lv:0,}];
 
   var contextMenu = document.querySelector("#contextMenu");
+  var menuTitle = document.querySelector('#menuTitle');
   var currentId = '';
   var total = 0;
 
@@ -82,6 +83,7 @@
     contextMenu.style.left= x + 'px';
     contextMenu.style.display = 'block';
     currentId = (e.target.id || e.target.textContent).replace(/\d*/g, '');
+    menuTitle.textContent = currentId;
   }
 
   function calcTotal () {
